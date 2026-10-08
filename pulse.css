@@ -1,0 +1,58 @@
+:root {
+  --pulse-bg: #000000;
+  --pulse-surface: #111821;
+  --pulse-text: #f5f7fa;
+  --pulse-muted: #a8b3c1;
+  --pulse-cyan: #00f5ff;
+
+  --pulse-glow: 0 0 12px rgba(0, 245, 255, 0.65);
+  --pulse-glow-strong: 0 0 22px rgba(0, 245, 255, 0.85);
+
+  --pulse-radius: 12px;
+}
+
+body {
+  background: var(--pulse-bg);
+  color: var(--pulse-text);
+}
+
+h1 {
+  color: var(--pulse-cyan);
+  text-shadow: var(--pulse-glow);
+}
+
+.pulse-button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  color: var(--pulse-cyan);
+  border: 1px solid var(--pulse-cyan);
+  border-radius: var(--pulse-radius);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.pulse-button:hover {
+  background: var(--pulse-cyan);
+  color: var(--pulse-bg);
+  box-shadow: var(--pulse-glow-strong);
+}
+
+.pulse-card {
+  padding: 1.5rem;
+  background: var(--pulse-surface);
+  border: 1px solid rgba(0, 245, 255, 0.25);
+  border-radius: var(--pulse-radius);
+  transition: 0.2s ease;
+}
+
+.pulse-card:hover {
+  border-color: var(--pulse-cyan);
+  box-shadow: var(--pulse-glow);
+  transform: translateY(-4px);
+}
+
+.pulse-text {
+  color: var(--pulse-cyan);
+  text-shadow: var(--pulse-glow);
+}
